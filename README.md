@@ -4,20 +4,20 @@ Sometimes, you need to increase performance when you draw a large world map. To 
 
 It is the example of real-time world map construction using a chunks with a cache queue. 
 
-**	1.	Game Initialization**
+	1.	Game Initialization
 	•	The main package sets up the game using Ebitengine.
 	•	Constants define tile, chunk, and screen sizes.
 	•	The Game struct holds the game state, including the World and player position.
-**	2.	Chunk Management**
+	2.	Chunk Management
 	•	World manages chunks using a map (Chunks) and a cache (cacheQueue).
 	•	A queue (genQueue) is used to process chunk generation in worker goroutines.
-**	3.	Chunk Generation**
+	3.	Chunk Generation
 	•	NewWorld() initializes the world and starts multiple chunkWorker goroutines.
 	•	Workers process chunk coordinates from genQueue, generate chunks, and store them in Chunks.
-**	4.	Rendering**
+	4.	Rendering
 	•	Each chunk is stored as an ebiten.Image and drawn on the screen.
 	•	Only a limited number of chunks (VisibleChunks) are rendered to optimize performance.
-**	5.	Game Loop**
+	5.	Game Loop
 	•	Ebitengine’s update-draw cycle updates the player position and determines visible chunks.
 	•	The Draw method renders only the chunks near the player.
 
