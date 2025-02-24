@@ -1,6 +1,7 @@
-## Hello everyone!
+### Hello everyone!
 
-<>Sometimes, you need to increase performance when you draw a large world map. To achieve this, you can use chunks of the world's map.<br> 
+Sometimes, you need to increase performance when drawing a large world map.<br>
+To achieve this, you can use chunks of the world's map.<br> 
 It is the example of real-time world map construction using a chunks with a cache queue.</p> 
 
 	1.	Game Initialization
