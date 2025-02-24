@@ -75,7 +75,7 @@ When a new coordinate arrives:
 - The chunk reference is added to cacheQueue.
 
 **3. Chunk Generation Process**
-for example we fill the chunk with palette colors.<br> 
+For example we fill the chunk with palette colors.<br> 
 But in real conditions we can fill the chunk with map tiles,<br>
 and after it convert the generated data into an ebiten.Image for rendering.
 
