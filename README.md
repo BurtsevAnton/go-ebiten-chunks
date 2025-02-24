@@ -67,6 +67,7 @@ genQueue chan [2]int:
 - It starts multiple worker goroutines (ChunkWorkers = 4) that run chunkWorker().
 
 **2. Chunk Worker (chunkWorker)**
+
 Each worker listens for chunk coordinates from genQueue.
 When a new coordinate arrives:
 - It checks if the chunk is already in Chunks (avoiding duplication).
@@ -75,6 +76,7 @@ When a new coordinate arrives:
 - The chunk reference is added to cacheQueue.
 
 **3. Chunk Generation Process**
+
 For example we fill the chunk with palette colors.<br> 
 But in real conditions we can fill the chunk with map tiles,<br>
 and after it convert the generated data into an ebiten.Image for rendering.
