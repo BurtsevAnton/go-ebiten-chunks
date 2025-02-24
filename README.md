@@ -75,10 +75,9 @@ When a new coordinate arrives:
 - The chunk reference is added to cacheQueue.
 
 **3. Chunk Generation Process**
-The exact generation logic isn’t visible in the preview, but typically it would:
-- Use Perlin noise or another algorithm to create terrain.
-- Assign textures/colors based on height values.
-- Convert the generated data into an ebiten.Image for rendering.
+for example we fill the chunk with palette colors.<br> 
+But in real conditions we can fill the chunk with map tiles,<br>
+and after it convert the generated data into an ebiten.Image for rendering.
 
 **4. Handling Chunk Cache**
 - The cacheQueue ensures the number of stored chunks does not exceed MaxChunks = 50.
